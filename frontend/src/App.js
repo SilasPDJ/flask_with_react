@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import useFetch from './utils/renomearessaporra';
+import useFetch from './hooks/useFetch';
 
 function App() {
   const { data: dataFromBackend, loading } = useFetch('http://localhost:5000/api/test');
