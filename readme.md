@@ -12,7 +12,7 @@
 
 1. Ctrl+P `path.js`
 
-    #### In path.js `module.exports = {...}` -> Go To Line 57 and add:
+    In path.js `module.exports = {...}` -> Go To Line 57 and add:
 
     `appBuild: resolveApp('../backend/static/react'),`
 
