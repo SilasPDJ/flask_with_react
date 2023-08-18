@@ -8,41 +8,18 @@
 
 1. `cd frontend`
 
-1. `npm run eject` ... `y` to accept
-
-1. Ctrl+P `path.js`
-
-    In path.js `module.exports = {...}` -> Go To Line 57 and add:
-
-    `appBuild: resolveApp('../backend/static/react'),`
-
-1. Ctrl+P `webpack.config.js`
-   add the `filename` property
-    ```
-    Object.assign(
-        {},
-        {
-            ...
-            filename: "../../templates/index.html"
-        },
-        ...
-    )
-    ```
-1. Test the jinja in `public/index.html`. Example:
+1. Ctrl+P `package.json` add in scripts:
 
     ```
-        <script>
-            window.token = '{{ flask_token }}'
-        </script>
+    "scripts": {
+        "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+        "backend": "python ../backend/main.py",
+        "frontend": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
     ```
-
-1. Ctrl+P `App.js` add
-
-    `{ window.token }`
-
-1. Ctrl+P `package.json` add before `"scripts"` (in line 60 more or less), add:
-
-    `"homepage": "static/react",`
 
 1. `npm run build`
 
