@@ -23,6 +23,10 @@
 
 1. `npm run build`
 
+1. `npm start`
+
+    Obs: `src/hooks/useFetch.js` may be very important
+
 ### Starting with Backend
 
 1. `mkdir backend`
