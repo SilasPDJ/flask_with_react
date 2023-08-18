@@ -1,10 +1,10 @@
 # `Flask with React` Template
 
-### Creating from 0:
+### Starting with Frontend
+
+#### In terminal run the following commands:
 
 1. `npx create-react-app frontend`
-
-1. `mkdir backend`
 
 1. `cd frontend`
 
@@ -43,6 +43,12 @@
 1. Ctrl+P `package.json` add before `"scripts"` (in line 60 more or less), add:
 
     `"homepage": "static/react",`
+
+1. `npm run build`
+
+### Starting with Backend
+
+1. `mkdir backend`
 
 1. create `backend/main.py` with Flask:
 
