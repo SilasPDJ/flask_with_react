@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import useFetch from './utils/renomearessaporra';
 
 function App() {
+  const { data: dataFromBackend, loading } = useFetch('http://localhost:5000/api/test');
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {window.token}
-        </a>
-      </header>
+      <h1>React App</h1>
+      <p>{dataFromBackend.message}</p>
     </div>
   );
 }
